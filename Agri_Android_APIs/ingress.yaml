@@ -4,7 +4,10 @@ metadata:
   name: agri-app-ingress
   annotations:
     nginx.ingress.kubernetes.io/rewrite-target: /
+    nginx.ingress.kubernetes.io/ssl-redirect: "false"
+    nginx.ingress.kubernetes.io/backend-protocol: "HTTP"
 spec:
+  ingressClassName: nginx
   rules:
   - host: agri-app.local
     http:
