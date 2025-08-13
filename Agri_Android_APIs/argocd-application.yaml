@@ -1,0 +1,20 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: agri-app
+  namespace: argocd
+spec:
+  project: default
+  source:
+    repoURL: https://github.com/Sadish-Kumar-CTS/Agri-Test.git
+    targetRevision: HEAD
+    path: Agri_Android_APIs
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: default
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+    syncOptions:
+    - CreateNamespace=true
