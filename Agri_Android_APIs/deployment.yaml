@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: agri-app
-        image: 876092575456.dkr.ecr.us-west-2.amazonaws.com/neurosan_cognizant_sso:latest
+        image: 876092575456.dkr.ecr.us-west-2.amazonaws.com/neurosan_cognizant_sso:203c9fbea3c755e2bad1c949b9be6027b19402df
         ports:
         - containerPort: 8080
         resources:
