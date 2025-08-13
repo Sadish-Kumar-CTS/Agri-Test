@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: agri-app-config
+  labels:
+    app: agri-app
+data:
+  application.properties: |
+    server.port=8080
+    spring.application.name=agri-learnings
