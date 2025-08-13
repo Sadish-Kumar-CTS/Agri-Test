@@ -16,7 +16,8 @@ spec:
     spec:
       containers:
       - name: agri-app
-        image: 876092575456.dkr.ecr.us-west-2.amazonaws.com/neurosan_cognizant_sso:203c9fbea3c755e2bad1c949b9be6027b19402df
+        image: 876092575456.dkr.ecr.us-west-2.amazonaws.com/neurosan_cognizant_sso:latest
+        imagePullPolicy: Always
         ports:
         - containerPort: 8080
         resources:
@@ -30,11 +31,11 @@ spec:
           httpGet:
             path: /api/open/v1.0/greet
             port: 8080
-          initialDelaySeconds: 60
+          initialDelaySeconds: 30
           periodSeconds: 30
         readinessProbe:
           httpGet:
             path: /api/open/v1.0/greet
             port: 8080
-          initialDelaySeconds: 30
+          initialDelaySeconds: 15
           periodSeconds: 10
